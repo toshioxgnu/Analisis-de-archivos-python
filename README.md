@@ -20,18 +20,23 @@ de ambos archivos de datos.
 
 Un marcador es óptimo si cumple con las siguientes características:
 • Debe tener el código del ID del gen igual en ambos archivos.
+
 • Y debe tener el código del ID del marcador igual en ambos archivos.
+
 • Considerando las 2 anteriores condiciones, puede permitir una diferencia de hasta N unidades de
 diferencia entre “inicios” y “términos” de cada marcador. Por ejemplo, si un “inicio” (en uno de
 los archivos) es mayor o menor hasta N dígitos al “inicio” del otro archivo y sí, además, el
 “término” de ese marcador es mayor o menor hasta N dígitos al “término” del otro archivo se
 debe considerar como marcador óptimo.
+
 • Donde N es un parámetro ingresado por el usuario para determinar el nivel de sensibilidad en la
 selección de cada marcador. Si el N ingresado por el usuario:
+
 • Es igual a 0 el nivel de sensibilidad es: Estricto.
 Esto implica que si el “inicio” en un archivo A es igual al del otro archivo B, entonces al
 comparar los “términos” pueden tener un “término” de distinto valor. O si el “término” es igual
 en ambos archivos, entonces el “inicio” puede ser distinto.
+
 • Si se ingresa un 1 es intensidad: Mediano.
 Esto implica que si el “inicio” en un archivo A es menor en 1 unidad al “inicio” del archivo B,
 entonces se pueden dar dos casos: primer caso, al comparar “los términos”, el “término” en el
@@ -42,7 +47,9 @@ O también puede implicar que si el “inicio” en un archivo A es mayor en 1 u
 del archivo B, entonces se pueden dar dos casos: primer caso, el “término” en el archivo A (del
 “inicio” mayor) puede ser igual o menor a 1 unidad del “término” del archivo B. Segundo caso,
 el “término” del archivo B puede ser mayor o igual 2 unidades respecto al “término” del archivo
-A.•
+A.
+
+
 Si se ingresa un 2 es: Relajado (el nivel menos estricto).
 Esto implica que si el “inicio” de A es menor en 2 unidades al “inicio” de B, entonces se pueden
 dar dos casos: primero caso, el “término” A puede ser menor o igual a 2 unidad al “término” de
